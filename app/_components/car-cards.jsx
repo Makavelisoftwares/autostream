@@ -29,7 +29,7 @@ export const CarCards = async () => {
     <div className="grid grid-cols-3 gap-3">
       {cars.map((item, i) => (
         <Link key={i} href={`/car/${item?.id}`}>
-          <Card className="h-[45vh]" key={i}>
+          <Card className="h-[50vh]" key={i}>
             <CardContent>
               <div className=" overflow-hidden relative aspect-video mt-2">
                 <Image
@@ -57,28 +57,28 @@ export const CarCards = async () => {
                 <div className="flex items-center my-3 justify-between">
                   <div className="flex mt-1 truncate items-center space-x-1 text-xs">
                     <div>
-                      <CarTaxiFront className="text-sky-500 h-[15px] w-[15px]" />
+                      <CarTaxiFront className="text-sky-500 h-[25px] w-[25px]" />
                     </div>
                     <div>{item?.bodytype}</div>
                   </div>
 
                   <div className="flex mt-1 truncate items-center space-x-1 text-xs">
                     <div>
-                      <Fuel className="text-sky-500 h-[15px] w-[15px]" />
+                      <Fuel className="text-sky-500 h-[25px] w-[25px]" />
                     </div>
                     <div>{item?.fuel}</div>
                   </div>
 
                   <div className="flex mt-1 truncate items-center space-x-1 text-xs">
                     <div>
-                      <Settings2 className="text-sky-500 h-[15px] w-[15px]" />
+                      <Settings2 className="text-sky-500 h-[25px] w-[25px]" />
                     </div>
                     <div>{item?.transmission}</div>
                   </div>
 
                   <div className="flex mt-1 items-center space-x-1 text-xs">
                     <div>
-                      <RockingChair className="text-sky-500 h-[15px] w-[15px]" />
+                      <RockingChair className="text-sky-500 h-[25px] w-[25px]" />
                     </div>
                     <div>{item?.capacity}</div>
                   </div>

@@ -29,6 +29,7 @@ async function SingelBookingPage({ params }) {
           },
         },
       },
+      user:true
     },
   });
 
@@ -177,6 +178,21 @@ async function SingelBookingPage({ params }) {
           {/* Form for updating status */}
           <Card className="w-[350px] p-2">
             <UpdateCarStatus id={id} />
+            <div className="border-t border-zinc-400/40 mt-5 space-y-3">
+              <div className="text-sm font-bold" >Client Details</div>
+
+              <div className="flex items-center space-x-3">
+                <div className="w-[100px]">Client name</div>
+                <div className="text-xs">{booking?.user?.name}</div>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <div className="w-[100px]">Client email</div>
+                <div className="text-xs">{booking?.user?.email}</div>
+              </div>
+
+              
+            </div>
           </Card>
         </div>
       </CardContent>

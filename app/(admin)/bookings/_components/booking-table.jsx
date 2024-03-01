@@ -13,8 +13,7 @@ import { ArrowRightCircle } from "lucide-react";
 import moment from "moment";
 import Link from "next/link";
 
-export const BookingsTable = async() => {
-
+export const BookingsTable = async () => {
   const bookings = await db.booking.findMany({
     include: {
       reserve: {
@@ -22,6 +21,7 @@ export const BookingsTable = async() => {
           car: true,
         },
       },
+      user: true,
     },
     orderBy: {
       createdAt: "desc",
@@ -32,9 +32,10 @@ export const BookingsTable = async() => {
     <Table>
       <TableCaption>A list of your recent booking.</TableCaption>
       <TableHeader>
-      <TableRow>
+        <TableRow>
           <TableHead>Order Id</TableHead>
           <TableHead>Car Name</TableHead>
+          <TableHead>Client Name</TableHead>
           <TableHead>Status</TableHead>
           <TableHead>Start Date</TableHead>
           <TableHead>End Date</TableHead>
@@ -44,10 +45,12 @@ export const BookingsTable = async() => {
         </TableRow>
       </TableHeader>
       <TableBody>
-      {bookings?.map((item, i) => (
+        {bookings?.map((item, i) => (
           <TableRow key={i}>
             <TableCell className="font-medium">{item?.orderId}</TableCell>
             <TableCell>{item?.reserve?.car?.name}</TableCell>
+            <TableCell>{item?.user?.name}</TableCell>
+
             <TableCell>
               {item?.status == "BOOKED" && (
                 <Badge className="bg-sky-500 text-white text-sm">booked</Badge>
@@ -74,14 +77,12 @@ export const BookingsTable = async() => {
             </TableCell>
             <TableCell>{item?.reserve?.totalhours} hrs</TableCell>
 
-
             <TableCell>{`$${JSON.parse(item?.reserve?.totalprice)}`}</TableCell>
             <TableCell>
               <Link href={`/bookings/${item?.id}`}>
-                <ArrowRightCircle/>
+                <ArrowRightCircle />
               </Link>
             </TableCell>
-
           </TableRow>
         ))}
       </TableBody>

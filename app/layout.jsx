@@ -12,6 +12,9 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
+
   return (
     <ClerkProvider>
       <PayPalProvider>

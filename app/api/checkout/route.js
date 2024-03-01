@@ -1,4 +1,5 @@
 import { db } from "@/lib/db/db";
+import { currentUser } from "@clerk/nextjs";
 import paypal from "@paypal/checkout-server-sdk";
 import { NextResponse } from "next/server";
 
@@ -11,6 +12,7 @@ const client = new paypal.core.PayPalHttpClient(environment);
 
 export const POST = async (req) => {
   try {
+    const { id } = await currentUser();
     const { reserveId, price } = await req.json();
 
     const totalprice = parseInt(price).toFixed(2);
@@ -53,6 +55,7 @@ export const POST = async (req) => {
         data: {
           orderId: response.result.id,
           reserveId: reserveId,
+          userId: id,
         },
       });
     }
@@ -81,7 +84,7 @@ export const PUT = async (req) => {
       },
     });
 
-    return NextResponse.json('updated',{status:200})
+    return NextResponse.json("updated", { status: 200 });
   } catch (error) {
     console.log(error);
   }
