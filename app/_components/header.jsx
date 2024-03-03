@@ -91,7 +91,7 @@ export const Header = async () => {
               contact
             </Link>
           </nav>
-          {/* <UserBtn /> */}
+          <UserBtn />
         </div>
       )}
     </div>
