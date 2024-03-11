@@ -16,7 +16,7 @@ export const DashBoardTable = ({data}) => {
   
 
   return (
-    <Table>
+    <Table className='w-full'>
       <TableCaption>A list of today's bookings.</TableCaption>
       <TableHeader>
         <TableRow>

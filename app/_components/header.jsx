@@ -63,10 +63,12 @@ export const Header = async () => {
 
             <Link
               className="text-sm font-medium hover:underline underline-offset-4"
-              href="#"
+              href="/mybookings"
             >
-              contact
+              My Bookings
             </Link>
+
+            
           </nav>
           <UserBtn />
         </div>

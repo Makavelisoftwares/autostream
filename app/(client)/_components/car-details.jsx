@@ -52,17 +52,17 @@ export const CarDetails = async ({ id }) => {
           <CardHeader>
             <CardTitle className="text-xl font-bold">{car?.name}</CardTitle>
           </CardHeader>
-          <CardContent className="space-x-3 flex">
+          <CardContent className="space-x-3 flex flex-col md:flex-row">
             <div className="space-y-4">
               <Card>
-                <CardContent className="h-[70vh] w-[850px]">
+                <CardContent className="md:h-[70vh] h-[50vh] w-full md:w-[850px]">
                   <EmblaCouresel image={car?.image} images={car?.Images} />
                 </CardContent>
               </Card>
 
-              <Card className="w-[850px]">
+              <Card className="md:w-[850px] w-full">
                 <CardContent>
-                  <div className="grid grid-cols-3">
+                  <div className="grid md:grid-cols-3 grid-cols-1">
                     <div className="col-span-1 flex p-2 items-center space-x-2">
                       <div className="text-sm">Brand:</div>
                       <div className="text-sm font-bold">
@@ -100,14 +100,14 @@ export const CarDetails = async ({ id }) => {
                     <div className="col-span-1 flex p-2 items-center space-x-2">
                       <div className="text-sm">Price Per Hour:</div>
                       <div className="text-sm font-bold">
-                        Ksh. {car?.priceperhour}
+                        $ {car?.priceperhour}
                       </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="w-[850px]">
+              <Card className="md:w-[850px] w-full mb-3">
                 <CardHeader>
                   <CardTitle className="text-sm font-bold">
                     Car feature/details
@@ -163,11 +163,11 @@ export const CarDetails = async ({ id }) => {
             </div>
 
             <div>
-              <Card>
+              <Card className="mt-3">
                 <CardContent>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-[300px] p-2 text-sm ">Price</div>
-                    <div className="font-bold">Ksh {car?.priceperhour}/hr</div>
+                  <div className="flex items-center justify-between space-x-4">
+                    <div className="md:w-[300px] p-2 text-sm ">Price</div>
+                    <div className="font-bold">$ {car?.priceperhour}/hr</div>
                   </div>
 
                   <Separator />

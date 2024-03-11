@@ -109,7 +109,7 @@ export const CreateCarForm = () => {
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className=" space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
               <div className="col-span-1">
                 <FormField
                   control={form.control}
@@ -359,9 +359,7 @@ export const CreateCarForm = () => {
                   <FormItem className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
                     <div className="space-y-0.5">
                       <FormLabel>Fastag</FormLabel>
-                      <FormDescription>
-                        Receive emails about new products, features, and more.
-                      </FormDescription>
+                      
                     </div>
                     <FormControl>
                       <Switch
@@ -380,9 +378,7 @@ export const CreateCarForm = () => {
                   <FormItem className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
                     <div className="space-y-0.5">
                       <FormLabel>Sun roof</FormLabel>
-                      <FormDescription>
-                        Receive emails about new products, features, and more.
-                      </FormDescription>
+                      
                     </div>
                     <FormControl>
                       <Switch
@@ -401,9 +397,7 @@ export const CreateCarForm = () => {
                   <FormItem className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
                     <div className="space-y-0.5">
                       <FormLabel>Cruise control</FormLabel>
-                      <FormDescription>
-                        Receive emails about new products, features, and more.
-                      </FormDescription>
+                      
                     </div>
                     <FormControl>
                       <Switch
@@ -422,9 +416,7 @@ export const CreateCarForm = () => {
                   <FormItem className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
                     <div className="space-y-0.5">
                       <FormLabel>360 camera</FormLabel>
-                      <FormDescription>
-                        Receive emails about new products, features, and more.
-                      </FormDescription>
+                      
                     </div>
                     <FormControl>
                       <Switch
@@ -443,9 +435,7 @@ export const CreateCarForm = () => {
                   <FormItem className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
                     <div className="space-y-0.5">
                       <FormLabel>Home delivery</FormLabel>
-                      <FormDescription>
-                        Receive emails about new products, features, and more.
-                      </FormDescription>
+                      
                     </div>
                     <FormControl>
                       <Switch
@@ -464,9 +454,7 @@ export const CreateCarForm = () => {
                   <FormItem className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
                     <div className="space-y-0.5">
                       <FormLabel>Air Bags</FormLabel>
-                      <FormDescription>
-                        Receive emails about new products, features, and more.
-                      </FormDescription>
+                      
                     </div>
                     <FormControl>
                       <Switch

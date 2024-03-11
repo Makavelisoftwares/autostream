@@ -76,7 +76,7 @@ async function CheckoutPage({ params }) {
             <div className="flex items-center space-x-2">
               <div className="text-sm font-bold w-[250px]">Total Price: </div>
               <div className="text-xl font-bold">
-                Ksh. {`${JSON.parse(reservation?.totalprice)}`}
+                $ {`${JSON.parse(reservation?.totalprice)}`}
               </div>
             </div>
           </div>

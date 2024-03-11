@@ -26,7 +26,7 @@ export const CarCards = async () => {
   });
 
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid md:grid-cols-3 gap-3 grid-cols-1">
       {cars.map((item, i) => (
         <Link key={i} href={`/car/${item?.id}`}>
           <Card className="h-[50vh]" key={i}>

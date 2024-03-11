@@ -194,7 +194,7 @@ export function BookingForm({ price, id }) {
         </div>
         <div className="flex items-center justify-between">
           <div>Total Amount</div>
-          <div>Ksh. {parseInt(price) * totalhours}</div>
+          <div>$ {parseInt(price) * totalhours}</div>
         </div>
 
         <Button type="submit" disabled={isSubmitting} className="w-full">
