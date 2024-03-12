@@ -5,9 +5,9 @@ import { MobileToggle } from "@/components/mobile";
 function AdminLayout({ children }) {
   return (
     <div className="flex">
-      <div className="md:w-[200px] hidden md:flex h-screen fixed border-r border-zinc-300/30">
+      <div className=" w-[200px] hidden md:flex h-screen fixed border-r border-zinc-300/30">
         <SideBar />
-      </div>
+      </div>  
 
       <div className="md:pl-[200px] w-full">
         <div className="p-3">

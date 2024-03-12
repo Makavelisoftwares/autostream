@@ -66,15 +66,15 @@ async function SingelBookingPage({ params }) {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex space-x-2">
-          <div className="w-[700px] space-y-3">
-            <Card className="w-full h-[70vh]">
-              <CardContent className='h-[70vh]'>
+        <div className="md:flex md:space-x-2 space-y-2">
+          <div className="md:w-[700px] w-full space-y-3">
+            <Card className="w-full md:h-[70vh] h-[50vh]">
+              <CardContent className='md:h-[70vh] h-[50vh]'>
                 <EmblaCouresel image={car?.image} images={car?.Images}/>
               </CardContent>
             </Card>
             <Card className="p-2">
-              <CardContent className="grid grid-cols-3 gap-2">
+              <CardContent className="grid md:grid-cols-3 grid-cols-1 gap-2">
                 <div className="col-span-1 flex items-center space-x-3">
                   <div className="text-zinc-400">Brand</div>
                   <div className="font-bold text-sm">{car?.brand?.name}</div>
@@ -176,7 +176,7 @@ async function SingelBookingPage({ params }) {
           </div>
 
           {/* Form for updating status */}
-          <Card className="w-[350px] p-2">
+          <Card className="md:w-[350px] w-full p-2">
             <UpdateCarStatus id={id} />
             <div className="border-t border-zinc-400/40 mt-5 space-y-3">
               <div className="text-sm font-bold" >Client Details</div>

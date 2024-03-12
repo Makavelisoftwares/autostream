@@ -37,11 +37,10 @@ async function DashboardPage() {
       </div>
 
       <Card className="border-none shadow-none mt-4">
-        <CardContent className="grid md:grid-cols-4 grid-cols-1 gap-5">
+        <CardContent className="grid md:grid-cols-3 grid-cols-1 gap-5">
           <DashboardCards title="Today's Booking" href={'/bookings'} number={todayBoookings?.length} />
           <DashboardCards title="Total Brands" href={'/brands'} number={brands?.length} />
           <DashboardCards title="Total Cars" href={'/cars'} number={cars?.length} />
-          <DashboardCards title="Total Clients" href={'/verify'} number={0} />
         </CardContent>
       </Card>
 

@@ -2,7 +2,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { UserBtn } from "@/components/user-btn/user-btn";
 import Image from "next/image";
 import { Profile } from "./profile";
-import { CarFront, Layout, List, ListChecksIcon, User } from "lucide-react";
+import { CarFront, Layout, List, ListChecksIcon } from "lucide-react";
 import { Links } from "./links";
 
 export const SideBar = () => {
@@ -27,11 +27,7 @@ export const SideBar = () => {
         href: "/cars",
         icon: <CarFront className="text-zinc-600/50"/>,
       },
-      {
-        name: "Verify clients",
-        href: "/verify",
-        icon: <User className="text-zinc-600/50" />,
-      },
+     
   ];
 
   return (

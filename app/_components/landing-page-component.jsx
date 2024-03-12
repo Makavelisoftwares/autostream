@@ -4,9 +4,7 @@
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 import Link from "next/link";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+
 
 export default function LandingPageComponent() {
   return (
@@ -15,11 +13,8 @@ export default function LandingPageComponent() {
         <section className="w-full pt-5 md:pt-15 lg:pt-20 xl:pt-24 mb-7">
           <div className="container flex justify-center items-center gap-4 px-4 text-center sm:gap-6 md:px-6 lg:gap-10 lg:grid-cols-2 xl:gap-16">
             <div className="space-y-4">
-              <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
-                Introducing
-              </div>
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Rent your dream car
+                Hire your dream car
               </h1>
               <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 Experience the open road. Find the perfect car for your next
@@ -190,7 +185,7 @@ export default function LandingPageComponent() {
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-gray-500 dark:text-gray-400">
-          © 2024 Acme Inc. All rights reserved.
+          © 2024 AutoStream. All rights reserved.
         </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link className="text-xs hover:underline underline-offset-4" href="#">

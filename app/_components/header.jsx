@@ -25,8 +25,12 @@ export const Header = async () => {
 
   return (
     <div className="flex items-center justify-between p-3 px-4 border-b border-zinc-300/30">
-      <div className="relative h-[40px] w-[40px]">
-        <Image src="/crsm.svg" alt="logo" fill className="object-contain" />
+      <div className="flex items-center space-x-2">
+        <Link href="/" className="relative h-[40px] w-[40px]">
+          <Image src="/crsm.svg" alt="logo" fill className="object-contain" />
+        </Link>
+
+        <div className="text-lg font-semibold italic">AutoStream</div>
       </div>
 
       {users?.role == "ADMIN" && (
@@ -37,12 +41,6 @@ export const Header = async () => {
               href="/dashboard"
             >
               Dashboard
-            </Link>
-            <Link
-              className="text-sm font-medium hover:underline underline-offset-4"
-              href="#"
-            >
-              contact
             </Link>
           </nav>
           <UserBtn />
@@ -67,8 +65,6 @@ export const Header = async () => {
             >
               My Bookings
             </Link>
-
-            
           </nav>
           <UserBtn />
         </div>
